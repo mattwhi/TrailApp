@@ -1,0 +1,23 @@
+{
+  "name": "mynewtrailapp",
+  "description": "A Mountain Biking Trail Application",
+  "main": "index.js",
+  "authors": [
+    "Matthew White"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "ngmap": "^1.17.3",
+    "geocoder-service": "^0.0.6"
+  }
+}

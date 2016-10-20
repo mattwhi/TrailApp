@@ -1,0 +1,22 @@
+{
+  "name": "mynewtrailapp",
+  "version": "1.0.0",
+  "description": "A Mountain Biking Trail Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew White",
+  "license": "ISC",
+  "dependencies": {
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-jwt": "0.0.9",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-messages": "^1.5.8",
+    "angular-resource": "^1.5.7",
+    "angular-storage": "0.0.15",
+    "angular-ui-router": "^0.3.1",
+    "auth0-angular": "^4.2.3"
+  }
+}

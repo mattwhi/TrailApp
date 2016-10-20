@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+        <input type="text" class="form-control" ng-model="searchTrails" placeholder="Search Trails"/>
+    </div>
+</div>
+<div class="panel panel-default" ng-repeat="t in trail | filter:searchTrails">
+    <div class="panel-heading">{{ t.title }}</div>
+    <div class="panel-body">
+        <p>{{ t.town }}</p>
+        <p>{{ t.description }}</p>
+            <ul ng-repeat="grade in t.grades">
+                <p>Trail Grades Available</p>
+                <li class="trailGrade red" ng-show="grade.red"></li>
+                <li class="trailGrade blue" ng-show="grade.blue"></li>
+                <li class="trailGrade green" ng-show="grade.green"></li>
+                <li class="trailGrade black" ng-show="grade.black"></li>
+            </ul>
+        <p><a href="#/trailInfo/{{$index}}" class="btn btn-primary pull-right" role="button">More info</a>
+
+    </div>
+</div>
+<style>
+    
+    .trailGrade {
+        float: left;
+        display: inline-block;
+        margin-left:5px;
+        list-style: none;
+    }
+    li.trailGrade {
+        width:10px;
+        height:10px;
+        border-radius:50%;
+    }
+    li.trailGrade.red {
+        background: red;
+    }
+    li.trailGrade.green {
+        background: green;
+    }
+    li.trailGrade.blue {
+        background: blue;
+    }
+    li.trailGrade.black {
+        background: black;
+    }
+</style>

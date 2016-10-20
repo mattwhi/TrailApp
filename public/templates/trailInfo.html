@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+    <div class="panel-heading">{{ detail.title }}</div>
+    <div class="panel-body">
+        <p>Nearest Town: {{ detail.town }}</p>
+        <p>Description: {{ detail.description }}</p>
+            <ul ng-repeat="grade in detail.grades">
+                <p>Trail Grades Available</p>
+                <li class="trailGrade red" ng-show="grade.red"></li>
+                <li class="trailGrade blue" ng-show="grade.blue"></li>
+                <li class="trailGrade green" ng-show="grade.green"></li>
+                <li class="trailGrade black" ng-show="grade.black"></li>
+            </ul>
+            <br/>
+            <hr>
+            <div map-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map center="{{detail.lat}},{{detail.lon}}" zoom="12"></ng-map>
+            </div>
+            <hr>
+            <h3>Weather Details</h3>
+            <div class="row" ng-repeat="w in weatherResults.list">
+                <div ng-repeat="wm in w.weather">
+                    <div class="col-md-8">
+                        <p>Daytime Temp: {{ convertToCelcius(w.main.temp) }}&#8451;</p>
+                        <p>Description: {{ wm.description }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="http://openweathermap.org/img/w/{{ wm.icon }}.png"/>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .trailGrade {
+        float: left;
+        display: inline-block;
+        margin-left:5px;
+        list-style: none;
+    }
+    li.trailGrade {
+        width:10px;
+        height:10px;
+        border-radius:50%;
+    }
+    li.trailGrade.red {
+        background: red;
+    }
+    li.trailGrade.green {
+        background: green;
+    }
+    li.trailGrade.blue {
+        background: blue;
+    }
+    li.trailGrade.black {
+        background: black;
+    }
+    .trailGrade::after {
+        clear:both;
+    }
+</style>

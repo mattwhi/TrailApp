@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="trailApp">
+<head>
+	<title>MTB Bike Trails</title>
+    <!-- Auth0's lock widget library -->
+    <script type="text/javascript" src="https://cdn.auth0.com/js/lock-9.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+    <toolbar></toolbar>
+
+<div class="container">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Whats New</div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div ng-view></div> 
+    </div>
+       
+</div>
+
+<!-- -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="../node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="../node_modules/angular-jwt/dist/angular-jwt.min.js"></script>
+    <script src="../node_modules/angular-storage/dist/angular-storage.min.js"></script>
+    <script src="../node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="../node_modules/auth0-angular/build/auth0-angular.min.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/angular-material/angular-material.js"></script>
+
+
+
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/geocoder-service/geocoder-service.min.js"></script>
+    
+    <script src="http://maps.google.com/maps/api/js"></script>
+  
+     
+      <script src="js/app.js"></script>
+    <script src="components/profile/profile.ctr.js"></script>
+    <script src="components/toolbar/toolbar.dir.js"></script>
+
+    
+    
+</body>
+</html>
